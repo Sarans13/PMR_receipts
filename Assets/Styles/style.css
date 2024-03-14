@@ -131,7 +131,7 @@ img {
     padding: 1rem 1rem;
 }
 
-.nav {
+.nav{
     position: relative;
     max-width: 100%;
     height: var(--header-height);
@@ -146,6 +146,10 @@ img {
     display: flex;
     color: var(--title-color);
     cursor: pointer;
+}
+
+.nav__logo{
+    margin-right: 2rem;
 }
 
 .nav__toggle {
@@ -179,14 +183,23 @@ img {
     row-gap: 3rem;
 }
 
-.nav__link {
-    color: var(--title-color);
+.nav__item {
     font-weight: var(--font-semi-bold);
-    transition: color .4s;
+    padding: 1rem;
+    transition: background-color .4s, color .4s;
 }
 
-.nav__link:hover {
-    color: var(--first-color);
+.nav__link{
+    color: var(--title-color);
+}
+
+.nav__item:hover {
+    background-color: var(--white-color);
+    border-radius: 50px;
+}
+
+.nav__item:hover .nav__link{
+    color: var(--black-color);
 }
 
 .nav__close {
@@ -242,6 +255,7 @@ img {
 
 .land__description {
     margin-bottom: 3rem;
+    line-height: 1.5rem;
     /* font-size: var(--small-font-size); */
 }
 
@@ -494,6 +508,7 @@ img {
 }
 
 .pricing__buttons .button {
+    font-size: 0.75rem;
     justify-content: center;
 }
 
@@ -683,8 +698,19 @@ img {
         top: 0;
     }
 
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+
     .nav{
-        height: calc(var(--header-height) + 2rem);
+        margin: auto;
+        display: inline-flex;
+        justify-content: center;
+        padding: 2rem;
+        background-color: var(--primary-body-color);
+        border-radius: 50px;
+        /* height: calc(var(--header-height) + 2rem); */
     }
 
     .nav__toggle, .nav__close{
@@ -697,7 +723,7 @@ img {
 
     .nav__list{
         flex-direction: row;
-        column-gap: 3.5rem;
+        column-gap: 2rem;
     }
 
     .land__container{
@@ -725,6 +751,8 @@ img {
 
     .land__buttons .button{
         margin-left: 0;
+        width: 10rem;
+        height: 4rem;
     }
 
 }
