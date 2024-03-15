@@ -44,11 +44,20 @@ faqCards.forEach(card => {
     });
 });
 
-
-/*=============== SHOW SCROLL UP ===============*/ 
-
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2500,
+    delay: 300,
+    reset: true
+})
+
+sr.reveal(`.land__image`);
+sr.reveal(`.land__data`);
+sr.reveal(`.aboutUs__container`);
+sr.reveal(`.invoiceGenerator__container`);
+sr.reveal(`.faq__container`);
+sr.reveal(`.pricing__container`);
+
