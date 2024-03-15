@@ -270,7 +270,7 @@ img {
 /*=============== BUTTON ===============*/
 .button {
     background-color: var(--white-color);
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 0.75rem;
     max-width: 15rem;
     margin: auto;
@@ -363,11 +363,66 @@ img {
     height: 179px;
     display: grid;
     align-items: center;
-    place-items: center;
+    justify-items: center;
     background-color: var(--black-color);
     padding: 1.4rem;
     border: 1px solid gray;
     border-radius: 12px;
+}
+
+.invoiceGenerator__card .info {
+    display: none;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.invoiceGenerator__card .info > p:first-of-type {
+    color: var(--white-color);
+}
+
+
+.invoiceGenerator__card .button__wrapper {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.invoiceGenerator__card .button__wrapper .button{
+    width: 90%;
+    color: #5C6068;
+    font-size: 0.7rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.invoiceGenerator__card .button__wrapper .button i{
+    color: #5C6068;
+    font-size: 1.2rem;
+}
+
+.invoiceGenerator__card .info p {
+    margin: 0;
+}
+
+.invoiceGenerator__card:hover .info {
+    z-index: 1;
+    display: block;
+}
+
+.invoiceGenerator__card:hover .button__wrapper {
+    display: block;
+}
+
+.invoiceGenerator__card:hover img {
+    filter: brightness(0.1);
 }
 
 /*=============== FAQ ===============*/
