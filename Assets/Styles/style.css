@@ -118,6 +118,10 @@ img {
     overflow: hidden;
 }
 
+input{
+    font-family: var(--body-font) !important;
+}
+
 /*=============== HEADER & NAV ===============*/
 
 .header {
@@ -168,11 +172,12 @@ img {
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         background-color: hsla(228, 24%, 6%, .2);
-        width: 80%;
+        width: 100%;
         height: 100%;
         padding: 6rem 3rem 0;
         transition: right .4s;
         z-index: 1000;
+        align-items: center;
     }
 
 }
@@ -188,17 +193,18 @@ img {
     padding: 1rem;
     transition: background-color .4s, color .4s;
     border-radius: 50px;
+    text-align: center;
 }
 
 .nav__link{
     color: var(--title-color);
 }
 
-.nav__item:hover {
+.active{
     background-color: var(--white-color);
 }
 
-.nav__item:hover .nav__link{
+.active .nav__link{
     color: var(--black-color);
 }
 
@@ -208,7 +214,6 @@ img {
     right: 1.5rem;
     font-size: 1.25rem;
 }
-
 
 /* Show menu */
 .show-menu {

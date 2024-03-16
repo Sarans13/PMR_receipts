@@ -61,3 +61,33 @@ sr.reveal(`.invoiceGenerator__container`);
 sr.reveal(`.faq__container`);
 sr.reveal(`.pricing__container`);
 
+/*================== ACTIVE NAV BAR CONTROLLER =============== */
+document.addEventListener("DOMContentLoaded", function() {
+    const navItems = document.querySelectorAll(".nav__item");
+    const loginNavItem = document.querySelector(".nav__item.active");
+  
+    navItems.forEach(function(navItem) {
+      navItem.addEventListener("mouseover", function() {
+        // Remove active class from all nav__items
+        navItems.forEach(function(item) {
+          item.classList.remove("active");
+        });
+        
+        // Add active class to the hovered nav__item
+        navItem.classList.add("active");
+      });
+    });
+  
+    // Add event listener to the nav__list
+    const navList = document.querySelector(".nav__list");
+    navList.addEventListener("mouseleave", function() {
+      // Remove active class from all nav__items
+      navItems.forEach(function(item) {
+        item.classList.remove("active");
+      });
+      
+      // Add active class to the login nav__item
+      loginNavItem.classList.add("active");
+    });
+  });
+  
