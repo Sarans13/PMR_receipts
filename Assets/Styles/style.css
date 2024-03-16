@@ -173,6 +173,7 @@ img {
         height: 100%;
         padding: 6rem 3rem 0;
         transition: right .4s;
+        z-index: 1000;
     }
 
 }
