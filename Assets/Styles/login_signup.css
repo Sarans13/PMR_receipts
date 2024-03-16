@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3.5rem;
@@ -23,7 +22,7 @@
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: "Montserrat", sans-serif;
+    --body-font: "Poppins", sans-serif;
     --biggest-font-size: 2rem;
     --h1-font-size: 1.4rem;
     --h2-font-size: 1.2rem;
@@ -128,15 +127,14 @@ img {
 }
 
 .right__container img{
-    max-height: 100vh;
-    width: 100%;
+    width: 90%;
 }
 
 .left__container{
-    height: 100vh;
     display: grid;
     place-items: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .left__container__content{
@@ -274,10 +272,17 @@ input[type="checkbox"] {
     background-color: var(--primary-body-color);
 }
 
-
+/*=============== PLACEHOLDER ===============*/
+::-ms-input-placeholder { 
+    font-family: var(--body-font);
+  }
+  
+  ::placeholder {
+    font-family: var(--body-font);
+  }
 
 /* ================== for small devices =============== */
-@media screen and (max-width: 1120px){
+@media screen and (max-width: 1050px){
     .container{
         grid-template-columns: 1fr;
     }
