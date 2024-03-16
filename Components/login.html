@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="../Assets/Images/logo.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== STYLESHEET ===============-->
+    <link rel="stylesheet" href="../Assets/Styles/login_signup.css" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left__container">
+        <div class="left__container__content">
+          <div class="form__data">
+            <h2 class="form__heading">Welcome Back</h2>
+            <p class="form__description">
+                Let's get all set up so you can verify your personal account and begin setting up your profile
+            </p>
+          </div>
+          <div class="form__container">
+            <form method="post" onsubmit="">
+              <div class="form__item">
+                <div><label for="email_address">Email Address</label></div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Enter Email Address"
+                    name="email_address"
+                  />
+                </div>
+              </div>
+                <div class="form__item">
+                  <div><label for="password">Enter Password</label></div>
+                  <div>
+                    <input
+                      type="password"
+                      placeholder="Enter Your Password"
+                      name="password"
+                    />
+                  </div>
+                </div>
+              <a href="#"><button class="button" type="submit">Log In</button></a>
+            </form>
+          </div>
+          <div class="already__account">Don't have an Account ? <a href="../Components/signup.html" class="special__anchor">Create Account</a></div>
+        </div>
+      </div>
+      <div class="right__container">
+        <img src="../Assets/Images/login.png" alt="login">
+      </div>
+    </div>
+       <!--=============== SCROLL REVEAL JS ===============-->
+       <script src="../Assets/JS/scrollreveal.min.js"></script>
+
+       <!--=============== MAIN JS ===============-->
+       <script src="../Assets/JS/login_signup.js"></script>
+  </body>
+</html>

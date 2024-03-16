@@ -187,6 +187,7 @@ img {
     font-weight: var(--font-semi-bold);
     padding: 1rem;
     transition: background-color .4s, color .4s;
+    border-radius: 50px;
 }
 
 .nav__link{
@@ -195,7 +196,6 @@ img {
 
 .nav__item:hover {
     background-color: var(--white-color);
-    border-radius: 50px;
 }
 
 .nav__item:hover .nav__link{
@@ -412,6 +412,10 @@ img {
     margin: 0;
 }
 
+.invoiceGenerator__card:hover{
+    cursor: pointer;
+}
+
 .invoiceGenerator__card:hover .info {
     z-index: 1;
     display: block;
@@ -448,7 +452,6 @@ img {
 
 .faq__card {
     width: 90%;
-    text-align: justify;
     background-color: var(--black-color);
     padding: 2rem;
     border: 1px solid gray;

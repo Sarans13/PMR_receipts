@@ -1,0 +1,287 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(313, 93%, 21%);
+    --first-color-alt: hsl(93, 50%, 48%);
+    --first-color-light: hsl(93, 58%, 66%);
+    --title-color: hsl(228, 8%, 98%);
+    --text-color: hsl(228, 8%, 70%);
+    --white-color: hsl(228, 8%, 98%);
+    --black-color: hsl(228, 6%, 4%);
+    --primary-body-color: hsl(0, 0%, 9%);
+    --secondary-body-color: hsl(228, 0%, 0%);
+    --container-color: hsl(228, 6%, 12%);
+    --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
+    --gradient-card: linear-gradient(180deg,
+            hsla(93, 8%, 8%),
+            hsla(93, 40%, 30%));
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Montserrat", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.4rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .9rem;
+    --small-font-size: .8rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--secondary-body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 5rem 2rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+/*=============== SIGNUP AND LOGIN===============*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: var(--small-font-size);
+}
+
+.right__container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right__container img{
+    max-height: 100vh;
+    width: 100%;
+}
+
+.left__container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.left__container__content{
+    max-width: 70%;
+}
+
+
+.left__container__content{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form__data{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form__description{
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.form__container form{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.container__two__horizontal__items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+.form__item{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form__item input{
+    color: var(--white-color);
+    width: 100%;
+    background-color: var(--primary-body-color);
+    padding: 0.75rem;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.white{
+    color: var(--white-color);
+}
+
+.button{
+    width: 100%;
+    padding: 0.85rem;
+    font-weight: 500;
+}
+
+.already__account{
+    text-align: center;
+}
+
+.special__anchor{
+    color: var(--white-color);
+    text-decoration: underline;
+    font-weight: var(--font-semi-bold);
+}
+
+
+/* ================== Check box =================== */
+
+#checkbox__input{
+    display: flex;
+    gap: 5px;
+    line-height: 1.3rem
+}
+
+input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: white;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0.1rem;
+    border: 1px solid gray;
+    border-radius: 1px;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    clip-path: polygon(4% 56%, 33% 78%, 94% 12%, 100% 25%, 32% 95%, 0 72%);
+    transform: scale(0);
+    background-color: white;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="checkbox"]:hover {
+   cursor: pointer;
+  }
+  
+
+
+/*================= PHONE NUMBER ================= */
+.Phone__box input{
+    border: none;
+    border-radius: 0 6px 6px 0;
+}
+
+.country__code{
+    padding: 0.75rem;
+    border-right: 2px solid;
+    border-image: linear-gradient(to bottom, var(--primary-body-color) 0%, var(--primary-body-color) 25%, gray 50%, var(--primary-body-color) 75%, var(--primary-body-color) 100%);
+    border-image-slice: 1;
+}
+
+.Phone__box{
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.Phone__Input {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-body-color);
+}
+
+
+
+/* ================== for small devices =============== */
+@media screen and (max-width: 1120px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .right__container{
+        display: none;
+    }
+}
