@@ -67,9 +67,26 @@
         </div>
       </nav>
     </header>
-
     <!--==================== MAIN ====================-->
     <main class="main">
+      <div id="vip">
+        <div class="message__heading">
+          <p>VIP Access</p>
+          <button id="close__vip__message">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <div class="message__body">
+          <p>Become a VIP Member and get access to our exclusive generators</p>
+        </div>
+        <a href="#" class="">
+          <button class="button">
+            <span><i class="ri-vip-crown-fill"></i></span>
+            <p>GET ACCESS</p>
+          </button>
+        </a>
+      </div>
+
       <!--==================== Landing Page ====================-->
       <section class="landingPage section" id="landingPage">
         <div class="land__container container grid">
@@ -139,21 +156,22 @@
       </section>
 
       <!--==================== Invoice Generator ====================-->
+      <div id="overlay"></div>
       <section class="invoiceGenerator section" id="invoiceGenerator">
         <div class="invoiceGenerator__container container grid">
           <div class="invoiceGenerator__data">
-            <h2 class="section__title">Invoice Generator</h2>
+            <h2 class="section__title invoice__title">Invoice Generator</h2>
           </div>
           <div class="invoiceGenerator__content grid">
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>Amazon</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/Amazon.png" alt="Amazon" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -162,7 +180,7 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>American Express</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img
@@ -170,7 +188,7 @@
                 alt="AmericanExpress"
               />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -179,12 +197,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>Curl</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/curl.png" alt="curl" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -193,12 +211,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>D</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/D.png" alt="D" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -207,12 +225,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>.Net</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/DotNet.png" alt="Dotnet" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -221,12 +239,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>Drive</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/Drive.png" alt="Drive" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -235,12 +253,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>Gmail</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/Gmail.png" alt="Gmail" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -249,12 +267,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>i</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/i.png" alt="i" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -263,12 +281,12 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>Star</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/Star.png" alt="Star" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
@@ -277,18 +295,198 @@
             <article class="invoiceGenerator__card">
               <div class="info">
                 <p>XD</p>
-                <br>
+                <br />
                 <p>India</p>
               </div>
               <img src="Assets/Images/XD.png" alt="XD" />
               <div class="button__wrapper">
-                <button class="button">
+                <button class="button invoice__button">
                   <i class="ri-bill-fill"></i>
                   <p>GENERATE INVOICE</p>
                 </button>
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <!-- ======================= Invoice form Modal ============ -->
+      <section id="invoiceModal" class="invoice__modal__form">
+        <div class="invoice__modal__data">
+          <h2>Receipt Generator</h2>
+        </div>
+        <div class="form__container">
+          <form action="">
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="Currency">Currency</label></div>
+                <div>
+                  <input type="text" placeholder="USD" name="Currency" />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="order_date">Order Date</label></div>
+                <div>
+                  <input
+                    type="date"
+                    placeholder="DD/MM/YYYY"
+                    name="order_date"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="ship_date">Ship Date</label></div>
+                <div>
+                  <input
+                    type="date"
+                    placeholder="DD/MM/YYYY"
+                    name="ship_date"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="item_name">Item Name</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. Wireless Headphones"
+                    name="item_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div>
+                  <label for="item_subline">Item Subline(Optional)</label>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. noise cancelling"
+                    name="item_subline"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="item_price">Item Price</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. 299.99"
+                    name="item_price"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="item_quantity">Item Quantity</label></div>
+                <div>
+                  <input
+                    type="number"
+                    placeholder="e.g. 1"
+                    name="item_quantity"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="tax_percent">Tax %</label></div>
+                <div>
+                  <input
+                    type="number"
+                    placeholder="e.g. 15"
+                    name="tax_percent"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="sold_by">Sold By</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. Amazon LLC"
+                    name="sold_by"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="full_name">Full Name</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. John Doe"
+                    name="full_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="address_line_1">Address Line 1</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. 123 Main St"
+                    name="address_line_1"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div><label for="address_line_2">Address Line 2</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. apt 48"
+                    name="address_line_2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container__two__horizontal__items">
+              <div class="form__item">
+                <div><label for="country_state">Country/State</label></div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. california"
+                    name="country_state"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <div>
+                  <label for="zip_postalCode">ZIP / Postal Code</label>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="e.g. 90001"
+                    name="zip_postalCode"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form__item">
+              <div><label for="country">Country</label></div>
+              <div>
+                <input type="text" placeholder="e.g. USA" name="country" />
+              </div>
+            </div>
+            <div class="invoice__modal__text">
+              <p>
+                By generating the invoice you agree to only use the invoice for
+                educational purposes for your own website
+              </p>
+            </div>
+              <button class="button close__invoice">
+                Generate Invoice
+              </button>
+          </form>
         </div>
       </section>
 

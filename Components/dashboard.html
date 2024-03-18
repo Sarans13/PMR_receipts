@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="../Assets/Images/logo.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css"
+    />
+
+    <!--=============== STYLES ===============-->
+    <link rel="stylesheet" href="../Assets/Styles/dashboard.css" />
+  
+    <!--==================JQUERY======================-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  </head>
+  <body>
+    <!-- ============= Side Menu =============================== -->
+     <section id="menu">
+      <div class="logo">
+        <img src="../Assets/Images/logo.png" alt="logo" />
+        <p>PMR Receipts</p>
+        <i class="ri-close-fill close__nav"></i>
+      </div>
+
+      <div class="items">
+        <li><i class="ri-edit-box-fill"></i><a href="#">Edit Profile</a></li>
+        <li><i class="ri-receipt-fill"></i><a href="#">Receipt</a></li>
+        <li>
+          <i class="ri-secure-payment-fill"></i><a href="#">Payment Details</a>
+        </li>
+        <li><i class="ri-questionnaire-fill"></i><a href="#">Support</a></li>
+        <li><i class="ri-logout-box-fill"></i><a href="#">Logout</a></li>
+      </div>
+    </section>
+    <!-- =======================main interface========================== -->
+    <section id="interface">
+      <!-- ==========================Navigation Section============================= -->
+      <div class="navigation">
+        <div class="n1">
+            <div id="menu-btn"><i class="ri-align-justify"></i></div>
+          <div class="search">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search Settings..." />
+          </div>
+        </div>
+        <div class="profile">
+          <div class="image__container">
+            <img src="../Assets/Images/sample.jpg" alt="profile" />
+          </div>
+          <div class="name__designation">
+            <p class="bright">Alexandar Flamingo</p>
+            <p>Admin</p>
+          </div>
+          <div class="drop__down"><i class="ri-arrow-drop-down-line"></i></div>
+        </div>
+      </div>
+      <!-- ================================Values========================================== -->
+      <div class="values">
+        <div class="val-box">
+          <div class="icon__container"><i class="ri-wallet-line"></i></div>
+          <div class="text__container">
+            <span>Total Revenue</span>
+            <h3>$35,000</h3>
+          </div>
+        </div>
+        <div class="val-box">
+          <div class="icon__container"><i class="ri-file-download-fill"></i></div>
+          <div class="text__container">
+            <span>Total Downloads</span>
+            <h3>105</h3>
+          </div>
+        </div>
+        <div class="val-box">
+          <div class="icon__container"><i class="ri-file-text-line"></i></div>
+          <div class="text__container">
+            <span>Average Review</span>
+            <h3>5</h3>
+          </div>
+        </div>
+      </div>
+      <!-- =========================Table for past transactions================================= -->
+      <div class="board">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td class="name">Name</td>
+                    <td>Date of Buy</td>
+                    <td>Date of Use</td>
+                    <td>Expiry Date</td>
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Jenny Wilson</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="active">Active</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="people">
+                        <img src="../Assets/Images/sample.jpg" alt="photo">
+                        <p>Brooklyn Simmons</p>
+                    </td>
+                    <td>5/30/14</td>
+                    <td>1/15/12</td>
+                    <td>12/06/2020</td>
+                    <td class="status__class">
+                        <span class="inactive">Inactive</span>
+                        &nbsp;
+                        <i class="ri-links-fill"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Add the overlay here -->
+    <div class="overlay"></div>
+    <script>
+      $(document).ready(function() {
+        $('#menu-btn').click(function() {
+          $('#menu').addClass("active");
+        });
+    
+        $('.close__nav').click(function() {
+          $('#menu').removeClass("active");
+        });
+      });
+    </script>
+    
+  </body>
+</html>

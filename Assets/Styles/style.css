@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3.5rem;
@@ -118,7 +119,7 @@ img {
     overflow: hidden;
 }
 
-input{
+input {
     font-family: var(--body-font) !important;
 }
 
@@ -134,7 +135,7 @@ input{
     padding: 1rem 1rem;
 }
 
-.nav{
+.nav {
     position: relative;
     max-width: 100%;
     height: var(--header-height);
@@ -151,7 +152,7 @@ input{
     cursor: pointer;
 }
 
-.nav__logo{
+.nav__logo {
     margin-right: 2rem;
 }
 
@@ -196,15 +197,15 @@ input{
     text-align: center;
 }
 
-.nav__link{
+.nav__link {
     color: var(--title-color);
 }
 
-.active{
+.active {
     background-color: var(--white-color);
 }
 
-.active .nav__link{
+.active .nav__link {
     color: var(--black-color);
 }
 
@@ -220,9 +221,50 @@ input{
     right: 0;
 }
 
+/* ================= VIP ACCESS MESSAGE ============= */
+#vip {
+    position: fixed;
+    top: 60%;
+    right: 5%;
+    max-width: 400px;
+    z-index: 100;
+    display: grid;
+    row-gap: 2rem;
+    background: #101010;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 1.3rem;
+}
 
-/* Active link */
+.message__heading {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-weight: var(--font-bold);
+    font-size: 1.5rem;
+}
 
+.message__heading button {
+    background: transparent;
+    border: none;
+}
+
+.message__heading button:hover {
+    cursor: pointer;
+}
+
+.message__heading button i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#vip .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
 
 /*=============== landingPage ===============*/
 .landingPage {
@@ -385,7 +427,7 @@ input{
     border-radius: 5px;
 }
 
-.invoiceGenerator__card .info > p:first-of-type {
+.invoiceGenerator__card .info>p:first-of-type {
     color: var(--white-color);
 }
 
@@ -397,7 +439,7 @@ input{
     width: 100%;
 }
 
-.invoiceGenerator__card .button__wrapper .button{
+.invoiceGenerator__card .button__wrapper .button {
     width: 90%;
     color: #5C6068;
     font-size: 0.7rem;
@@ -408,7 +450,7 @@ input{
     gap: 0.5rem;
 }
 
-.invoiceGenerator__card .button__wrapper .button i{
+.invoiceGenerator__card .button__wrapper .button i {
     color: #5C6068;
     font-size: 1.2rem;
 }
@@ -417,7 +459,7 @@ input{
     margin: 0;
 }
 
-.invoiceGenerator__card:hover{
+.invoiceGenerator__card:hover {
     cursor: pointer;
 }
 
@@ -430,8 +472,87 @@ input{
     display: block;
 }
 
+.invoice__button:hover{
+    cursor: pointer;
+}
+
 .invoiceGenerator__card:hover img {
     filter: brightness(0.1);
+}
+
+/* =============== Invoice form Modal ==================== */
+
+.invoice__modal__form{
+    display: none;
+    row-gap: 2rem;
+    background-color: var(--black-color);
+    padding: 2rem;
+    border: 2px solid gray;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 80%;
+}
+
+.invoice__modal__form .button{
+    margin: 0;
+    max-width: 80rem;
+    width: 100%;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.visible{
+    display: grid;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 999;
+    display: none;
+  }
+  
+  #overlay.visible {
+    display: block;
+  }
+  
+.invoice__modal__data, .invoice__modal__text{
+    text-align: center;
+}
+
+.form__container form{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.container__two__horizontal__items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+.form__item{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form__item input{
+    color: var(--white-color);
+    width: 100%;
+    background-color: var(--primary-body-color);
+    padding: 0.75rem;
+    border: 1px solid gray;
+    border-radius: 6px;
 }
 
 /*=============== FAQ ===============*/
@@ -653,7 +774,7 @@ input{
     gap: 2rem;
 }
 
-.footer__column__3 .icons__holder div{
+.footer__column__3 .icons__holder div {
     margin-bottom: 1rem;
 }
 
@@ -673,17 +794,17 @@ input{
 
 
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: .6rem;
-    background-color: hsl(228,4%,15%);
+    background-color: hsl(228, 4%, 15%);
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: hsl(228,4%,25%);
+::-webkit-scrollbar-thumb {
+    background-color: hsl(228, 4%, 25%);
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background-color: hsl(228,4%,35%);
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(228, 4%, 35%);
 }
 
 
@@ -696,16 +817,16 @@ input{
     }
 }
 
-/* For small devices */
 @media (max-width: 500px) {
-    .footer{
+    .footer {
         padding: 2rem 0 2rem 0;
     }
+
     .column__container {
         width: 100%;
     }
 
-    .footer__column__3 .icons__holder{
+    .footer__column__3 .icons__holder {
         flex-wrap: wrap;
     }
 
@@ -718,11 +839,41 @@ input{
     .footer__column__3 .icons__holder {
         margin-top: 2rem;
     }
+
+    #vip {
+        top: 70%;
+        max-width: 300px;
+        row-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .message__heading {
+        font-size: 1rem;
+    }
+    
+    .message__heading button i {
+        font-size: 1rem;
+    }
+
+    .message__body{
+        font-size: 0.8rem;
+    }
+    
+    #vip .button {
+        gap: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
 }
 
-
-
 /* For medium devices */
+@media (max-width: 605px) {
+    .container__two__horizontal__items{
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 700px) {
     .aboutUs__content {
         grid-template-columns: repeat(2, 1fr);
@@ -744,17 +895,18 @@ input{
         text-align: left;
     }
 
-    .footer__column__3 .icons__holder{
+    .footer__column__3 .icons__holder {
         justify-content: flex-start;
     }
 }
 
-@media (min-width: 765px){
-    .landingPage{
+@media (min-width: 765px) {
+    .landingPage {
         display: grid;
         place-items: center;
     }
-    .land__container{
+
+    .land__container {
         display: grid;
         place-items: center;
     }
@@ -792,12 +944,12 @@ input{
         top: 0;
     }
 
-    .header{
+    .header {
         display: flex;
         justify-content: center;
     }
 
-    .nav{
+    .nav {
         margin: auto;
         display: inline-flex;
         justify-content: center;
@@ -807,20 +959,21 @@ input{
         /* height: calc(var(--header-height) + 2rem); */
     }
 
-    .nav__toggle, .nav__close{
+    .nav__toggle,
+    .nav__close {
         display: none;
     }
 
-    .nav__menu{
+    .nav__menu {
         width: initial;
     }
 
-    .nav__list{
+    .nav__list {
         flex-direction: row;
         column-gap: 2rem;
     }
 
-    .land__container{
+    .land__container {
         grid-template-columns: 600px 535px;
         grid-template-areas: 'left right';
         column-gap: 4rem;
@@ -832,18 +985,18 @@ input{
     }
 
     .right {
-        grid-area: right; 
+        grid-area: right;
     }
 
-    .land__image{
+    .land__image {
         width: 480px;
     }
 
-    .land__data{
+    .land__data {
         text-align: initial;
     }
 
-    .land__buttons .button{
+    .land__buttons .button {
         margin-left: 0;
         width: 12rem;
         height: 4rem;

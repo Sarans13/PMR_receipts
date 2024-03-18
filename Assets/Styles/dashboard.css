@@ -1,0 +1,602 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(313, 93%, 21%);
+    --first-color-alt: hsl(93, 50%, 48%);
+    --first-color-light: hsl(93, 58%, 66%);
+    --title-color: hsl(228, 8%, 98%);
+    --text-color: hsl(228, 8%, 70%);
+    --white-color: hsl(228, 8%, 98%);
+    --black-color: hsl(228, 6%, 4%);
+    --primary-body-color: hsl(0, 0%, 9%);
+    --secondary-body-color: hsl(228, 0%, 0%);
+    --container-color: hsl(228, 6%, 12%);
+    --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
+    --gradient-card: linear-gradient(180deg,
+            hsla(93, 8%, 8%),
+            hsla(93, 40%, 30%));
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.4rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .9rem;
+    --small-font-size: .8rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--secondary-body-color);
+    color: var(--text-color);
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 5rem 2rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+input {
+    font-family: var(--body-font) !important;
+}
+
+
+/* ================ aside menu bar ==================== */
+
+#menu {
+    background-color: var(--primary-body-color);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#menu .logo {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    padding: 30px 0 0 30px;
+}
+
+#menu .logo img {
+    margin-right: 15px;
+}
+
+#menu .logo i {
+    display: none;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#menu .logo i:hover{
+    cursor: pointer;
+}
+
+#menu .items {
+    margin-top: 40px;
+}
+
+#menu .items li {
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+    background-color: var(--secondary-body-color);
+    cursor: pointer;
+}
+
+#menu .items li i {
+    color: gray;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 10px 0 35px;
+    transition: 0.3s ease;
+}
+
+#menu .items li:hover i {
+    color: var(--white-color);
+}
+
+#menu .items li a {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+#menu .items li:hover a {
+    color: var(--white-color);
+}
+
+/* =========================Navigation===================== */
+
+#interface {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+#interface .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--primary-body-color);
+    position: fixed;
+    width: calc(100% - 300px);
+    background-color: var(--secondary-body-color);
+}
+
+.n1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-btn {
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+}
+
+#interface .navigation .search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 4px;
+    background-color: var(--primary-body-color);
+}
+
+#interface .navigation .search i {
+    margin-right: 14px;
+}
+
+#interface .navigation .search input {
+    border: none;
+    background: none;
+}
+
+#interface .navigation .profile {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#interface .navigation .profile i {
+    font-size: 30px;
+    font-weight: var(--font-bold);
+    margin-right: 20px;
+}
+
+#interface .navigation .profile img {
+    width: 100%;
+    height: 100%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#interface .navigation .profile p {
+    color: var(--white-color);
+    line-height: 1.3rem;
+    font-size: var(--small-font-size);
+}
+
+#interface .navigation .profile .bright {
+    font-weight: var(--font-bold);
+}
+
+/* ======================== Values ================================ */
+.values {
+    margin-top: 70px;
+    padding: 30px 30px 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.values .val-box {
+    background-color: var(--primary-body-color);
+    padding: 4rem 5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.values .val-box .icon__container {
+    width: 50px;
+    height: 50px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.values .val-box span {
+    margin-bottom: 2rem;
+}
+
+.values .val-box h3 {
+    font-size: 1.8rem;
+}
+
+/* ===================== Table ======================================= */
+.board {
+    width: 95%;
+    margin: 0px 0 30px 30px;
+    overflow: auto;
+    background: var(--primary-body-color);
+    border-radius: 8px;
+}
+
+.board img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board .people {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.status__class i {
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid #242424
+}
+
+thead td {
+    padding: 15px;
+}
+
+tbody tr td {
+    font-size: var(--small-font-size);
+    padding: 10px 15px;
+}
+
+.status__class .active {
+    padding: 2px 10px;
+    background-color: #d7fada;
+    color: #66BB6A;
+    border-radius: 40px;
+}
+
+
+.status__class .inactive {
+    padding: 2px 10px;
+    background-color: #ffdcdc;
+    color: #ff5555;
+    border-radius: 40px;
+}
+
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(228, 4%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(228, 4%, 25%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(228, 4%, 35%);
+}
+
+/* Add this style to create the semi-transparent overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; 
+}
+
+
+/* ==================== For large Devices ================================== */
+@media (max-width:1300px) {
+    #interface .navigation .profile {
+        width: 35%;
+    }
+
+    .values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1050px) {
+    #interface .navigation .profile {
+        width: 50%;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+    }
+
+    .board {
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 120%;
+        border-collapse: collapse;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .board {
+        width: 90%;
+    }
+
+    table {
+        width: 140%;
+        border-collapse: collapse;
+    }
+}
+
+
+@media (max-width:825px) {
+    .name__designation {
+        display: none;
+    }
+
+    .board {
+        width: 88%;
+    }
+
+    table {
+        width: 160%;
+        border-collapse: collapse;
+    }
+
+    #interface .navigation .profile {
+        width: 25%;
+    }
+}
+
+
+
+/* ==================== For Medium Devices ================================= */
+@media (max-width:713px) {
+    #menu {
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+    
+    #menu.active{
+        left: 0px;
+        z-index: 1000;
+    }
+
+    #menu.active ~ .overlay {
+        display: block;
+    }
+    
+
+    #menu.active .logo i{
+        display: block;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+
+    #interface {
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    #interface .navigation {
+        width: 100%;
+    }
+
+    .board{
+        width: 91%;
+    }
+
+}
+
+
+@media (max-width:685px) {
+    .values {
+        grid-template-columns: 1fr;
+    }
+
+    .board{
+        width: 88%;
+    }
+}
+
+
+/* ==================== For Small Devices ================================== */
+@media (max-width:493px){
+    table {
+        width: 200%;
+        border-collapse: collapse;
+    }
+}
+
+@media (max-width:417px){
+    #interface .navigation .search  {
+        width: 150px;
+        padding: 6px;
+    }
+
+    #interface .navigation .search input{
+        font-size: 0.65rem;
+        width: 100px;
+    }
+
+    .values .val-box{
+        padding: 2rem 3rem;
+    }
+
+    .board{
+        width: 85%;
+    }
+
+    #interface .navigation .profile img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width:390px){
+
+    .board{
+        width: 82%;
+    }
+
+    table{
+        width: 260%;
+        border-collapse: collapse;
+    }
+
+}
+
+@media (max-width:320px){
+
+    #interface .navigation .profile{
+        width: 30%;
+    }
+
+    #interface .navigation .search  {
+        width: auto;
+        background: none;
+    }
+
+    #interface .navigation .search input{
+       display: none;
+    }
+
+
+    .values .val-box h3{
+        font-size: 1rem;
+    }
+
+    .values .val-box span {
+        font-size: 0.5rem;
+        margin-bottom: 2rem;
+    }
+}
