@@ -290,12 +290,12 @@ input {
 
 .values .val-box {
     background-color: var(--primary-body-color);
-    padding: 4rem 5rem;
-    border-radius: 5px;
+    padding: 3rem 4rem;
+    border-radius: 15px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex: 1;
 }
 
@@ -309,8 +309,9 @@ input {
     justify-content: center;
 }
 
-.values .val-box span {
-    margin-bottom: 2rem;
+.values .val-box .text__container{
+    display: grid;
+    row-gap: 1.5rem;
 }
 
 .values .val-box h3 {
